@@ -10,7 +10,7 @@ use Wingsline\Blog\Http\Controllers\PostsController;
 
 // Admin routes
 Route::middleware(['web', 'blog-nocache'])
-    ->prefix(config('blog.backend.prefix'))
+    ->prefix(config('blog.backend_prefix'))
     ->group(function () {
         Route::get('login', [LoginController::class, 'showLoginForm'])->name('admin.login');
         Route::post('login', [LoginController::class, 'login']);
@@ -31,7 +31,7 @@ Route::middleware(['web', 'blog-nocache'])
     });
 
 Route::middleware(['web', 'blog-cacheResponse'])
-    ->prefix(config('blog.frontend.prefix'))
+    ->prefix(config('blog.frontend_prefix'))
     ->group(function () {
         Route::feeds();
         Route::get('/', HomeController::class);

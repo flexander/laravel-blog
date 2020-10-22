@@ -56,6 +56,6 @@ class LoginController extends BaseController
      */
     protected function redirectTo()
     {
-        return config('blog.backend.prefix');
+        return config('blog.backend_prefix');
     }
 }
