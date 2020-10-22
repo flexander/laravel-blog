@@ -11,7 +11,10 @@ return [
      |
      |
      */
-    'prefix' => env('ADMIN_PREFIX', 'admin'),
+    'prefix' => [
+        'frontend' => env('BLOG_PREFIX', ''),
+        'backend' => env('ADMIN_PREFIX', 'admin')
+    ],
 
     /*
     |--------------------------------------------------------------------------
