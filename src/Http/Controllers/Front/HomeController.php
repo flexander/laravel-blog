@@ -25,6 +25,6 @@ class HomeController extends BaseController
 
         $onFirstPage = $posts->onFirstPage();
 
-        return view('home.index', compact('posts', 'onFirstPage'));
+        return view('blog.index', compact('posts', 'onFirstPage'));
     }
 }
