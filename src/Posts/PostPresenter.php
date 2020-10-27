@@ -66,6 +66,6 @@ trait PostPresenter
             return $this->external_url;
         }
 
-        return route('post', $this->slug);
+        return route('blog.post', $this->slug);
     }
 }
